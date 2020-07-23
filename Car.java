@@ -1,9 +1,10 @@
-public class Car {
+public class Car extends Vehicle {
 
-    Vehicle veh = new Vehicle();
+    public Car(double speed) {
+        super(speed);
+    }
 
-    public double carSpeed() {
-        double carSpeed = veh.speedRead();
-        return carSpeed;
+    public void carSpeed() {
+        System.out.println("Car speed is: " + speed + " km/h");
     }
 }

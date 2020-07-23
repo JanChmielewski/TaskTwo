@@ -1,9 +1,11 @@
-public class Boat {
+public class Boat extends Vehicle {
 
-    Vehicle veh = new Vehicle();
+    public Boat(double speed) {
+        super(speed);
+    }
 
-    public double boatSpeed() {
-        double boatSpeed = (veh.speedRead()/1.852);
-        return boatSpeed;
+    public void boatSpeed() {
+        System.out.println("Boat speed is: " + speed/1.852 + " knots");
+
     }
 }

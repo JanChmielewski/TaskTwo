@@ -1,14 +1,20 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-//        Vehicle veh = new Vehicle();
-        Car car = new Car();
-        Boat boat = new Boat();
-        Bike bike = new Bike();
+        Scanner in = new Scanner(System.in);
 
-        System.out.println("Car speed is: " + car.carSpeed() + " km/h");
-        System.out.println("Boat speed is: " + boat.boatSpeed() + " knots");
-        System.out.println("Bike speed is: " + bike.bikeSpeed() + " m/s");
+        System.out.print("Enter speed here: ");
+        Vehicle veh = new Vehicle(0);
+        Car car = new Car(veh.getSpeed());
+        Boat boat = new Boat(veh.getSpeed());
+        Bike bike = new Bike(veh.getSpeed());
+
+        car.carSpeed();
+        boat.boatSpeed();
+        bike.bikeSpeed();
+
 
     }
 }

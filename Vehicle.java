@@ -4,12 +4,17 @@ public class Vehicle {
 
     public static final Scanner in = new Scanner(System.in);
 
-    public double speedRead() {
+    protected double speed;
 
-        System.out.print("Enter your speed here: ");
-        double speed = 0;
-        speed = in.nextInt();
+    public Vehicle (double speed) { this.speed = speed; }
+
+    public double getSpeed() {
+        speed = in.nextDouble();
         return speed;
     }
+
+
+
+
 
 }
